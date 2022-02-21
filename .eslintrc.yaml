@@ -3,13 +3,15 @@ env:
 parser: "@typescript-eslint/parser"
 plugins:
   - "@typescript-eslint"
+  - "simple-import-sort"
   - "prettier"
 extends:
   - "eslint:recommended"
   - "plugin:@typescript-eslint/recommended"
   - "prettier"
 rules: {
+  "simple-import-sort/exports": "error",
+  "simple-import-sort/imports": "error",
   "no-unused-vars": error,
-  "sort-imports": "error",
   "prettier/prettier": "error",
 }
